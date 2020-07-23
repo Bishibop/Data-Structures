@@ -58,25 +58,51 @@ Answer the following questions for each of the data structures you implemented a
 
 1. What is the runtime complexity of `ListNode.insert_after`?
 
+    O(1)
+
 2. What is the runtime complexity of `ListNode.insert_before`?
+
+    O(1)
 
 3. What is the runtime complexity of `ListNode.delete`?
 
+    O(1)
+
 4. What is the runtime complexity of `DoublyLinkedList.add_to_head`?
+
+    O(1)
 
 5. What is the runtime complexity of `DoublyLinkedList.remove_from_head`?
 
+    O(1)
+
 6. What is the runtime complexity of `DoublyLinkedList.add_to_tail`?
+
+    O(1)
 
 7. What is the runtime complexity of `DoublyLinkedList.remove_from_tail`?
 
+    O(1)
+
 8. What is the runtime complexity of `DoublyLinkedList.move_to_front`?
+
+    O(1)
 
 9. What is the runtime complexity of `DoublyLinkedList.move_to_end`?
 
+    O(1)
+
 10. What is the runtime complexity of `DoublyLinkedList.delete`?
 
+    O(1)
+
     a. Compare the runtime of the doubly linked list's `delete` method with the worst-case runtime of the JS `Array.splice` method. Which method generally performs better?
+
+    The worst-case runtime of JS `Array.splice` is O(n) because you would have
+    to copy as many as n-1 elements to a new array. The doubly linked lists's
+    `delete` is just O(1) because all you do is remap the references of
+    elements on either side of it, which the element to be deleted has
+    references too.
 
 ## Binary Search Tree
 
