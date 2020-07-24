@@ -1,7 +1,7 @@
 """
-Binary search trees are a data structure that enforce an ordering over 
-the data they store. That ordering in turn makes it a lot more efficient 
-at searching for a particular piece of data in the tree. 
+Binary search trees are a data structure that enforce an ordering over
+the data they store. That ordering in turn makes it a lot more efficient
+at searching for a particular piece of data in the tree.
 
 This part of the project comprises two days:
 1. Implement the methods `insert`, `contains`, `get_max`, and `for_each`
@@ -9,6 +9,8 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+
+
 class BSTNode:
     def __init__(self, value):
         self.value = value
@@ -16,8 +18,36 @@ class BSTNode:
         self.right = None
 
     # Insert the given value into the tree
+    # Recursive
+    #  def insert(self, value):
+    #      if value == self.value:
+    #          # Can BSTs contain duplicates?
+    #          pass
+    #      elif value < self.value:
+    #          if self.left:
+    #              self.left.insert(value)
+    #          else:
+    #              self.left = BSTNode(value)
+    #      elif value > self.value:
+    #          if self.right:
+    #              self.right.insert(value)
+    #          else:
+    #              self.right = BSTNode(value)
+
+    # Iterative
     def insert(self, value):
-        pass
+        target_node = self
+        parent_node = self
+        while target_node:
+            parent_node = target_node
+            if value < target_node.value:
+                target_node = target_node.left
+            else:
+                target_node = target_node.right
+        if value < parent_node.value:
+            parent_node.left = BSTNode(value)
+        else:
+            parent_node.right = BSTNode(value)
 
     # Return True if the tree contains the value
     # False if it does not
@@ -56,14 +86,20 @@ class BSTNode:
     def pre_order_dft(self):
         pass
 
+    # I added this because it is called below and was missing here
+    def in_order_dft(self):
+        pass
+
     # Print Post-order recursive DFT
     def post_order_dft(self):
         pass
 
+
 """
 This code is necessary for testing the `print` methods
 """
-bst = BinarySearchTree(1)
+#  bst = BinarySearchTree(1)
+bst = BSTNode(1)
 
 bst.insert(8)
 bst.insert(5)
@@ -82,4 +118,4 @@ bst.pre_order_dft()
 print("in order")
 bst.in_order_dft()
 print("post order")
-bst.post_order_dft()  
+bst.post_order_dft()
