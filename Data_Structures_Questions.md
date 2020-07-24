@@ -1,5 +1,6 @@
 Answer the following questions for each of the data structures you implemented as part of this project.
 
+
 ## Stack
 
 1. What is the runtime complexity of `push` using a list?
@@ -25,6 +26,7 @@ Answer the following questions for each of the data structures you implemented a
 6. What is the runtime complexity of `len` using a linked list?
 
     O(n)
+
 
 ## Queue
 
@@ -53,6 +55,7 @@ Answer the following questions for each of the data structures you implemented a
 6. What is the runtime complexity of `len` using a linked list?
 
     O(n)
+
 
 ## Doubly Linked List
 
@@ -104,16 +107,26 @@ Answer the following questions for each of the data structures you implemented a
     elements on either side of it, which the element to be deleted has
     references too.
 
+
 ## Binary Search Tree
 
 1. What is the runtime complexity of `insert`? 
 
+    O(log(n))
+
 2. What is the runtime complexity of `contains`?
+
+    O(n)
 
 3. What is the runtime complexity of `get_max`? 
 
+    O(log(n))
+
 4. What is the runtime complexity of `for_each`?
-    
+
+    O(n)
+
+
 ## Heap
 
 1. What is the runtime complexity of `_bubble_up`?
