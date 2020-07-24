@@ -112,15 +112,18 @@ Answer the following questions for each of the data structures you implemented a
 
 1. What is the runtime complexity of `insert`? 
 
-    O(log(n))
+    0(log(n)) if balanced
+    O(n) for the degenerative case of a linkedlist
 
 2. What is the runtime complexity of `contains`?
 
-    O(n)
+    0(log(n)) if balanced
+    O(n) for the degenerative case of a linkedlist
 
 3. What is the runtime complexity of `get_max`? 
 
-    O(log(n))
+    0(log(n)) if balanced
+    O(n) for the degenerative case of a linkedlist
 
 4. What is the runtime complexity of `for_each`?
 
