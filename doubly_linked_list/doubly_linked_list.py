@@ -175,3 +175,13 @@ class DoublyLinkedList:
         # Empty list
         else:
             return None
+
+    def find(self, query_fn):
+        if self.head:
+            current_node = self.head
+            while current_node:
+                if query_fn(current_node.value):
+                    return current_node
+                else:
+                    current_node = current_node.next
+        return False
